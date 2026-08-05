@@ -1,10 +1,17 @@
 import { DTICKET,TARIFSTUFEN,LEISTUNGSPREIS } from "./constants.js";
-import {calcDT,calcEinzelundTag,calcEGON} from "./calc.js";
+import {calcDT,calcEinzelundTag,calcEGON,calcMitnahmeEgon} from "./calc.js";
 let einzelArray=[];
 let tagArray=[];
 let DTArray=[];
 let EgonArray=[];
 let myChart;
+let checkbox=document.getElementById("Mitnahme");
+checkbox.addEventListener("change", ()=>{
+if(checkbox.checked){
+document.getElementById("additionalFields").style.display = "block"; 
+}else{
+document.getElementById("additionalFields").style.display = "none"; 
+}});
 function rechnen(){
 einzelArray=[];
  tagArray=[];
@@ -13,6 +20,7 @@ einzelArray=[];
 calcEinzelundTag(einzelArray,tagArray);
 calcDT(DTArray);
 calcEGON(EgonArray);
+calcMitnahmeEgon();
 showdig();
 }
 window.rechnen = rechnen;

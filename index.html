@@ -46,12 +46,29 @@
 	<label for="strecke">Strecke in Kilometer:</label>
     <input id="strecke" type="number" min="1" max="100" value="1">
     <br><br>
-    <button type="submit">Berechnen</button>
 	<label for="egonsonder">Egon Sonderfall:</label>
     <select id="egonsonder">
     <option value="false" selected>Normal</option>
     <option value="true">100|200</option>
 	</select>
+    <br><br>
+    
+    <label>Wollen sie jemanden mitnehmen?
+    <input type="checkbox" id="Mitnahme">
+    </label>
+    <br><br>
+    <div id="additionalFields" style="display:none;">
+    <label for="ErwachsenMitnahme">Ein Erwachsenen mitnehmen:</label>
+    <select id="ErwachsenMitnahme">
+    <option value="false" selected>Nein</option>
+    <option value="true">Ja</option>
+	</select>
+    <br><br>
+	<label for="KinderMitname">Hund/Kind/Fahrad mitnehmen:</label>
+    <input id="KinderMitname" type="number" min="0" max="5" value="1">
+    <p id="ergebniss"></p>
+    </div>
+    <button type="submit">Berechnen</button>
     <br><br>
 </form>
 	<canvas id="chart"></canvas>

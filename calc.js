@@ -77,3 +77,30 @@ console.log("Normaler Fahrpreis "+Fahrpreis);
     console.log("EGON:");
     console.log(EgonArray);
 }
+export function calcMitnahmeEgon(){
+let strecke=document.getElementById("strecke").value;
+let fahrten=document.getElementById("fahrten").value;
+let sonderfall=document.getElementById("egonsonder").value==="true";
+let KinderHundFahradMitnahme=Number(document.getElementById("KinderMitname").value);
+let erwachsenerMitnahme=document.getElementById("ErwachsenMitnahme").value==="true";
+let mitnaheAnzahl=KinderHundFahradMitnahme;
+if(erwachsenerMitnahme){
+mitnaheAnzahl+=1;
+}
+let TagesgrundPreis=1.5;
+let distanz=fahrten*strecke;
+if(distanz>=2&&sonderfall){
+TagesgrundPreis=3.0;
+}
+console.log("EGON Berechnen:");
+console.log("Tagesgrundpreis:");
+console.log(TagesgrundPreis);
+const Fahrpreis=(((strecke*LEISTUNGSPREIS)*fahrten)+TagesgrundPreis);
+console.log("Normaler Fahrpreis "+Fahrpreis);
+let aktuellerFahrpreis=Fahrpreis;
+aktuellerFahrpreis*=0.5;
+console.log("Fahrpreis mit Rabatt: "+aktuellerFahrpreis);
+aktuellerFahrpreis*=mitnaheAnzahl;
+console.log("Fahrpreis mit Rabatt und Anzahl Leute: "+aktuellerFahrpreis+" mit "+mitnaheAnzahl+" mitnahmen");
+document.getElementById("ergebniss").innerHTML= aktuellerFahrpreis.toFixed(2) + " € kostet die Mitnahme";
+}
