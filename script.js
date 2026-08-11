@@ -22,12 +22,16 @@ calcDT(DTArray);
 calcEGON(EgonArray);
 calcMitnahmeEgon();
 showdig();
+document.getElementById("chart").scrollIntoView({
+behavior: "smooth"
+});
 }
 window.rechnen = rechnen;
 
 
 
 function showdig(){
+    document.getElementById("chartCard").style.display = "block";
 	 if (myChart) {
         myChart.destroy();
     }
@@ -41,25 +45,33 @@ myChart=new Chart(document.getElementById("chart"), {
                 {
                     label: "Einzeltickets",
                     data: einzelArray,
-                    borderColor: "blue",
+                    borderColor: "#0A6ED1",
+                    borderWidth: 3,
+                    tension: 0.3,
                     fill: false
                 },
                 {
                     label: "Tagesticket",
                     data: tagArray,
-                    borderColor: "green",
+                    borderColor: "#28A745",
+                    borderWidth: 3,
+                    tension: 0.3,
                     fill: false
                 },
 				{
                     label: "Egon",
                     data: EgonArray,
-                    borderColor: "yellow",
+                    borderColor: "#D71920",
+                    borderWidth: 3,
+                    tension: 0.3,
                     fill: false
                 },
                 {
                     label: "Deutschlandticket",
                     data: DTArray,
-                    borderColor: "red",
+                    borderColor: "#555555",
+                    borderWidth: 3,
+                    tension: 0.3,
                     fill: false
                 }
             ]

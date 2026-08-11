@@ -102,5 +102,5 @@ aktuellerFahrpreis*=0.5;
 console.log("Fahrpreis mit Rabatt: "+aktuellerFahrpreis);
 aktuellerFahrpreis*=mitnaheAnzahl;
 console.log("Fahrpreis mit Rabatt und Anzahl Leute: "+aktuellerFahrpreis+" mit "+mitnaheAnzahl+" mitnahmen");
-document.getElementById("ergebniss").innerHTML= aktuellerFahrpreis.toFixed(2) + " € kostet die Mitnahme";
+document.getElementById("ergebniss").innerHTML= "Mitnahmekosten für " +fahrten +(fahrten == 1 ? " Fahrt: " : " Fahrten: ") +aktuellerFahrpreis.toFixed(2) +" €";
 }

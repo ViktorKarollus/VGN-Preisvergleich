@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <title>Test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VGN Preisvergleich</title>
+    <link rel="stylesheet" href="style.css">
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="script.js"></script>
 	</head>
 	<body>
-	
+<div class="container">
+<div class="header">
+<h1>VGN Tarifvergleich</h1>
+<p>Vergleich von EGON, Deutschlandticket, Einzel- und TagesTickets</p>
+</div>
 <form onsubmit="rechnen(); return false;">
 
     <label for="stufe">Tarifstufe:</label>
@@ -53,7 +60,7 @@
 	</select>
     <br><br>
     
-    <label>Wollen sie jemanden mitnehmen?
+    <label>Wollen Sie jemanden mitnehmen?
     <input type="checkbox" id="Mitnahme">
     </label>
     <br><br>
@@ -71,6 +78,9 @@
     <button type="submit">Berechnen</button>
     <br><br>
 </form>
+<div class="chart-card" id="chartCard" style="display:none;">
 	<canvas id="chart"></canvas>
+    </div>
+    </div>	
 </body>
 </html>

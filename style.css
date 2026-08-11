@@ -1,0 +1,136 @@
+:root{
+    --vgn-red:#d71920;
+    --vgn-darkred:#b51218;
+    --bg:#f5f6f8;
+    --card:#ffffff;
+    --text:#222;
+    --border:#d9d9d9;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    padding:30px;
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.header{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.header h1{
+    margin:0;
+    color:var(--vgn-red);
+    font-size:2.2rem;
+}
+
+.header p{
+    margin-top:10px;
+    color:#666;
+}
+
+form{
+    background:var(--card);
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+label{
+    display:block;
+    font-weight:600;
+    margin-bottom:6px;
+}
+
+select,
+input[type="number"]{
+    width:100%;
+    padding:12px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    font-size:15px;
+}
+
+select:focus,
+input:focus{
+    outline:none;
+    border-color:var(--vgn-red);
+    box-shadow:0 0 0 3px rgba(215,25,32,.15);
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:var(--vgn-red);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.2s;
+}
+
+button:hover{
+    background:var(--vgn-darkred);
+}
+
+.chart-card{
+    margin-top:25px;
+    background:white;
+    padding:20px;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+
+#additionalFields{
+    margin-top:15px;
+    padding:15px;
+    border-radius:12px;
+    background:#fafafa;
+    border:1px solid #eee;
+}
+
+#ergebniss{
+    background:#fff2f2;
+    border-left:4px solid var(--vgn-red);
+    padding:10px;
+    border-radius:8px;
+    font-weight:600;
+}
+
+input[type="checkbox"]{
+    transform:scale(1.2);
+    margin-left:8px;
+}
+
+br{
+    display:none;
+}
+
+form > *{
+    margin-bottom:15px;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    canvas{
+        height:350px !important;
+    }
+}
