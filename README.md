@@ -17,5 +17,6 @@ Der Nutzer kann folgende Werte eingeben:
 - Tarifstufe
 - Streckenlänge
 - EGON-Sonderfall
+- Mitnahme von Personen, Kindern, Hunden oder Fahrrädern
 
 Anschließend werden die kumulierten Kosten für einen Zeitraum von einem Monat berechnet und als Liniendiagramm dargestellt.
